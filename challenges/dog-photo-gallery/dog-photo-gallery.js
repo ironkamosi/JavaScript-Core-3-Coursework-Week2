@@ -10,14 +10,14 @@ function dogGallery() {
   divContainer.appendChild(ulElement);
 
   button.addEventListener("click", function () {
-    fetch("https://dog.ceo/api/breeds/image/random")
-      .then((data) => data.json)
-      .then((data) => {
-        (imgElement.src = data.message),
-          liElement.appendChild(imgElement),
-          ulElement.appendChild(liElement),
-          console.log("status of data", data.status);
-      })
-      .catch(console.log (error=>error))  
+      fetch("https://dog.ceo/api/breeds/image/random")
+          .then((data) => data.json)
+          .then((data) => {
+              (imgElement.src = data.message),
+                  liElement.appendChild(imgElement),
+                  ulElement.appendChild(liElement),
+                  console.log("status of data", data.status);
+          })
+          .catch(error => console.log(error));  
   });
 }
