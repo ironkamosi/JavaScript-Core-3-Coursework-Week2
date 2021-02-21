@@ -1,0 +1,12 @@
+body{
+background-color: antiquewhite;
+}
+button{
+background-color: rgb(224, 166, 166);
+width: 8em;
+height: 5em;
+}
+
+li{
+list-style: none;    
+}
