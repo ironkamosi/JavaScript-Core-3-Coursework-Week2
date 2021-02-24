@@ -16,12 +16,20 @@ Expected result
 Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
-
+function randomMeeting() {
+    let paragraphElement = document.getElementById("greeting-text");
+   
 fetch("https://codeyourfuture.herokuapp.com/api/greetings")
   .then(function (response) {
     return response.text();
   })
   .then(function (greeting) {
     // Write the code to display the greeting text here
-  });
+    paragraphElement.innerText = greeting 
+    // console.log(paragraphElement.innerText);
+  })
+  .catch(error => console.log(error))
   
+}
+
+randomMeeting()
